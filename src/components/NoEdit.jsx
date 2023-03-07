@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 
 
 const Main = () => {
-  const [activeNote, onUpdateNote] = useOutletContext()
+  const [activeNote, onUpdateNote, sideBarHide] = useOutletContext()
   const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,
@@ -15,7 +15,7 @@ const Main = () => {
   };
 
 //   const quillRef = useRef(null);
-  if (!activeNote) return <div className="no-active-note">No Active Note</div>;
+if (!activeNote) return <div className={`no-active-note ${sideBarHide && "wide"}`}>No Active Note</div>;
 
 
 
@@ -36,7 +36,7 @@ const Main = () => {
 //   };
 
   return (
-    <div className="app-main">
+    <div className={`app-main ${sideBarHide && "wide"}`}>
       <Link to="/edit">
       <button className="editButton">EDIT</button>
       </Link>

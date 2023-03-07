@@ -97,6 +97,18 @@ button:hover {
   /* border: 3px solid #73AD21; */
   /* border: 5px solid red; */
 }
+
+.app-main.wide{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    /* border: 3px solid #73AD21; */
+    /* border: 5px solid red; */
+  }
+
+
 .app-main-note-edit,
 .app-main-note-preview {
   height: 50vh;
@@ -104,12 +116,22 @@ button:hover {
 
 .no-active-note {
     
-    position: fixed;
-    top: 80px;
-    right: 0;
-    /* border: 3px solid #73AD21; */
-    
+  position: fixed;
+  top: 80px;
+  right: 0;
   width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+.no-active-note.wide {
+    
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 100%;
   height: 100vh;
   line-height: 100vh;
   text-align: center;
@@ -176,4 +198,10 @@ textarea {
 .editButton{
     background-color: #cfcfcf;
     padding: 10px
+}
+
+.menuButton{
+    position: fixed;
+    left: 40px;
+    font-size: 40px;
 }

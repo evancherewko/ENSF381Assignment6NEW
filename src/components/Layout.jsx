@@ -68,7 +68,7 @@ const Layout = () => {
                     activeNote={activeNote}
                     sideBarHide = {sideBarHide}
                     setSideBarHide = {setSideBarHide}/>
-            <Outlet context={[getActiveNote(), onUpdateNote]}/>
+            <Outlet context={[getActiveNote(), onUpdateNote, sideBarHide]}/>
         </div>
     );
 }

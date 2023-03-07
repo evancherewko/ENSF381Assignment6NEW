@@ -8,7 +8,7 @@ import { useOutletContext } from "react-router-dom";
 //when clocked on go to view, then click edit mode to edit
 
 const Main = () => {
-  const [activeNote, onUpdateNote] = useOutletContext()
+  const [activeNote, onUpdateNote, sideBarHide] = useOutletContext()
   const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,
@@ -18,15 +18,15 @@ const Main = () => {
   };
 
 //   const quillRef = useRef(null);
-  if (!activeNote) return <div className="no-active-note">No Active Note</div>;
+  if (!activeNote) return <div className={`no-active-note ${sideBarHide && "wide"}`}>No Active Note</div>;
 
 
 
-  const saveButton = () => {  
-    console.log(activeNote) 
-    console.log(activeNote.body)
-    console.log("Try save");
-  };
+//   const saveButton = () => {  
+//     console.log(activeNote) 
+//     console.log(activeNote.body)
+//     console.log("Try save");
+//   };
 
   const editMode = () => {
     if (activeNote.edit === true){
@@ -39,7 +39,7 @@ const Main = () => {
   };
 
   return (
-    <div className="app-main">
+    <div className={`app-main ${sideBarHide && "wide"}`}>
       <Link to="/">
       <button className="editButton">SAVE</button>
       </Link>
