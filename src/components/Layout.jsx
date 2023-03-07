@@ -4,8 +4,7 @@ import Sidebar from "./Sidebar";
 import Test from "./Test";
 import Main from "./Main";
 import { Outlet } from "react-router-dom";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+
 
 const Layout = () => {
     const [notes, setNotes] = useState(
