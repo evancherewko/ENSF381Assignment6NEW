@@ -32,7 +32,11 @@ const Layout = () => {
       };
     
       const onDeleteNote = (noteId) => {
-        setNotes(notes.filter(({ id }) => id !== noteId));
+
+        const res = window.confirm("Are you sure you would like to delete this note?");
+        if (res){
+            setNotes(notes.filter(({ id }) => id !== noteId));
+        }
       };
 
     
