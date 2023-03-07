@@ -6,7 +6,6 @@ import Test from "./components/Test";
 import Layout from "./components/Layout";
 import NoEdit from "./components/NoEdit";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Component } from "react";
 
 function App() {
   return (

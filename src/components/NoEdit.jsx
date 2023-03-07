@@ -25,22 +25,12 @@ if (!activeNote) return <div className={`no-active-note ${sideBarHide && "wide"}
     console.log("Try save");
   };
 
-//   const editMode = () => {
-//     if (activeNote.edit === true){
-//         onEditField("edit", false)
-//     }else{
-//         onEditField("edit", true)
-//     }
-//     console.log("h")
-//     console.log(activeNote.edit)
-//   };
-
   return (
     <div className={`app-main ${sideBarHide && "wide"}`}>
       <Link to="/edit">
       <button className="editButton">EDIT</button>
       </Link>
-      {/* <button className="saveButton" onClick={saveButton}>SAVE</button> */}
+    
       <div className="app-main-note-edit">
         <input
           readOnly="true"

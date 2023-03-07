@@ -17,16 +17,9 @@ const Main = () => {
     });
   };
 
-//   const quillRef = useRef(null);
+
   if (!activeNote) return <div className={`no-active-note ${sideBarHide && "wide"}`}>No Active Note</div>;
 
-
-
-//   const saveButton = () => {  
-//     console.log(activeNote) 
-//     console.log(activeNote.body)
-//     console.log("Try save");
-//   };
 
   const editMode = () => {
     if (activeNote.edit === true){
