@@ -2,10 +2,6 @@ import ReactQuill from "react-quill";
 import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
-//EDIT MODE IS INVERSED!!!!!
-//ALSO MAYBE STEAL ALEX StuFFF, starts in view mode when clicked on, and have to clkick edit mode.
-
-//when clocked on go to view, then click edit mode to edit
 
 const Main = () => {
   const [activeNote, onUpdateNote, sideBarHide] = useOutletContext()
@@ -36,7 +32,6 @@ const Main = () => {
       <Link to="/">
       <button className="editButton">SAVE</button>
       </Link>
-      {/* <button className="saveButton" onClick={saveButton}>SAVE</button> */}
       <div className="app-main-note-edit">
         <input
           type="text"

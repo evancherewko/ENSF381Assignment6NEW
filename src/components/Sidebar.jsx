@@ -13,7 +13,6 @@ const Sidebar = ({
     setSideBarHide,
   }) => {
     const sortedNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
-    // let newRoute = "/notes/" + activeNote.id;
     if (sideBarHide){return null};
 
     return (
